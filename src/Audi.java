@@ -1,8 +1,8 @@
 public class Audi implements Product {
-    String name = "Audi";
-    int cost = 60;
+    static final String name = "Audi";
+    static final int cost = 60;
 
-    public String getName(){
+    public  String getName(){
         return name;
     }
 

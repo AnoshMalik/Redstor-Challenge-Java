@@ -4,9 +4,11 @@ public class Main {
     static int bmwCounter = 0;
     static int chevroletCounter = 0;
     static int dodgeCounter = 0;
+    static int total = 0;
 
     public static void main(String[] args) {
         //Product apple = new Product();
+        Checkout checkout = new Checkout();
         appIntroduction();
 
         Scanner scanner = new Scanner(System.in);
@@ -25,12 +27,13 @@ public class Main {
                         incomingInput = false;
                         System.exit(0);
                     }else{
+                        incomingInput = false;
                         System.out.println("RESUMING APPLICATION");
                         break;
                     }
                 case 1 :
                     System.out.println("You have selected Audi");
-                    System.out.printf("Enter Quantity - ");
+                    System.out.print("Enter Quantity - ");
                     int audiQuantity = scanner.nextInt();
                     System.out.println("Order " + audiQuantity + " Audi cars? 1 for Yes, 0 for No");
                     int audiSurety = scanner.nextInt();
@@ -46,7 +49,7 @@ public class Main {
 
                 case 2 :
                     System.out.println("You have selected BMW");
-                    System.out.printf("Enter Quantity - ");
+                    System.out.print("Enter Quantity - ");
                     int bmwQuantity = scanner.nextInt();
                     System.out.println("Order " + bmwQuantity + " BMW cars? 1 for Yes, 0 for No");
                     int bmwSurety = scanner.nextInt();
@@ -60,7 +63,7 @@ public class Main {
                     break;
                 case 3 :
                     System.out.println("You have selected CHEVROLET");
-                    System.out.printf("Enter Quantity - ");
+                    System.out.print("Enter Quantity - ");
                     int chevroletQuantity = scanner.nextInt();
                     System.out.println("Order " + chevroletQuantity + " CHEVROLET cars? 1 for Yes, 0 for No");
                     int chevroletSurety = scanner.nextInt();
@@ -74,7 +77,7 @@ public class Main {
                     break;
                 case 4 :
                     System.out.println("You have selected DODGE");
-                    System.out.printf("Enter Quantity - ");
+                    System.out.print("Enter Quantity - ");
                     int dodgeQuantity = scanner.nextInt();
                     System.out.println("Order " + dodgeQuantity + " DODGE cars? 1 for Yes, 0 for No");
                     int dodgeSurety = scanner.nextInt();
@@ -86,6 +89,12 @@ public class Main {
                         System.out.println("RETURNING TO MAIN SCREEN");
                     }
                     break;
+                case 5 :
+                    total = checkout.getTotal();
+
+                default:
+                    System.out.println("Choose between 0 and 4");
+                    break;
 
 
             }
@@ -96,9 +105,13 @@ public class Main {
 
     }
     public static void appIntroduction(){
+//        System.out.print("\033\143");
         System.out.println("WELCOME TO THE REDSTOR SUPERCAR MARKET");
+        System.out.println("Cars ordered so far ... " + "| AUDI=" + audiCounter + " | BMW=" + bmwCounter + " | CHEVROLET=" + chevroletCounter + " | DODGE="+dodgeCounter + " |");
+        System.out.println(total);
         System.out.println("SELECT YOUR CARS");
-        System.out.println("Type : 1 for Audi [£60k] --  2 for BMW [£30k] -- 3 for CHEVROLET [£30k] -- 4 for DODGE [£25k] -- 0 TO CLOSE APP");
+        System.out.println("On your keyboard, choose between 0 and 5");
+        System.out.println("Type : 1 for Audi [£60k] --  2 for BMW [£30k] -- 3 for CHEVROLET [£30k] -- 4 for DODGE [£25k] -- 5 for CHECKOUT -- 0 TO CLOSE APP");
 
     }
 
