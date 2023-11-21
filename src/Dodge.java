@@ -1,13 +1,13 @@
-public class Dodge {
+public class Dodge extends Product{
 
      final String name = "Dodge";
-     final int cost = 25;
+     final static int cost = 25;
 
     public  String getName(){
         return name;
     }
 
-    public int getCost(){
+    public static int getCost(){
         return cost;
     }
 }

@@ -5,9 +5,9 @@ public class Checkout {
     Chevrolet chevrolet = new Chevrolet();
     Dodge dodge = new Dodge();
 
-    public int getTotal(){
+    public static int getTotal(){
+        return ((Main.audiCounter* Audi.getCost()) + (Main.bmwCounter* BMW.getCost()) + (Main.chevroletCounter*Chevrolet.getCost()) + (Main.dodgeCounter*Dodge.getCost()));
 
-        return ((Main.audiCounter*audi.getCost()) + (Main.bmwCounter*bmw.getCost()) + (Main.chevroletCounter*chevrolet.getCost()) + (Main.dodgeCounter*dodge.getCost()));
     }
 
 }

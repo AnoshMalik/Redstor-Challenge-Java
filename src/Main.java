@@ -4,11 +4,11 @@ public class Main {
     static int bmwCounter = 0;
     static int chevroletCounter = 0;
     static int dodgeCounter = 0;
-    static int total = 0;
+    static int total = Checkout.getTotal();
 
     public static void main(String[] args) {
         //Product apple = new Product();
-        Checkout checkout = new Checkout();
+//        Checkout checkout = new Checkout();
         appIntroduction();
 
         Scanner scanner = new Scanner(System.in);
@@ -27,7 +27,6 @@ public class Main {
                         incomingInput = false;
                         System.exit(0);
                     }else{
-                        incomingInput = false;
                         System.out.println("RESUMING APPLICATION");
                         break;
                     }
@@ -90,7 +89,12 @@ public class Main {
                     }
                     break;
                 case 5 :
-                    total = checkout.getTotal();
+                    total = Checkout.getTotal();
+//                    appIntroduction();
+                    System.out.println("YOUR CAR(S) WILL BE DELIVERED TO YOU SHORTLY. THANK YOU FOR YOUR ORDER! \nORDER TOTAL =£" + total+"k");
+                    incomingInput =false;
+                    System.exit(0);
+//                    break;
 
                 default:
                     System.out.println("Choose between 0 and 4");
@@ -105,10 +109,10 @@ public class Main {
 
     }
     public static void appIntroduction(){
-//        System.out.print("\033\143");
+        System.out.print("\033\143");
         System.out.println("WELCOME TO THE REDSTOR SUPERCAR MARKET");
         System.out.println("Cars ordered so far ... " + "| AUDI=" + audiCounter + " | BMW=" + bmwCounter + " | CHEVROLET=" + chevroletCounter + " | DODGE="+dodgeCounter + " |");
-        System.out.println(total);
+        System.out.println("TOTAL CHARGE - £"+total+"k");
         System.out.println("SELECT YOUR CARS");
         System.out.println("On your keyboard, choose between 0 and 5");
         System.out.println("Type : 1 for Audi [£60k] --  2 for BMW [£30k] -- 3 for CHEVROLET [£30k] -- 4 for DODGE [£25k] -- 5 for CHECKOUT -- 0 TO CLOSE APP");

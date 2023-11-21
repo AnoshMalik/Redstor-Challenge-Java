@@ -1,7 +1,11 @@
-public interface Product {
+public class Product {
 
-    public String getName();
-    public int getCost();
+    public  String getName(){
+        return "PRODUCT";
+    };
+    public static int getCost(){
+        return 0;
+    };
 
 
 }
