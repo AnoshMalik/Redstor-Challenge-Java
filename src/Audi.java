@@ -1,12 +1,12 @@
-public class Audi implements Product {
-    static final String name = "Audi";
-    static final int cost = 60;
+public class Audi extends Product {
+     final String name = "Audi";
+     final static int cost = 60;
 
     public  String getName(){
         return name;
     }
 
-    public int getCost(){
+    public static int getCost(){
         return cost;
     }
 
