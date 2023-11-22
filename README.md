@@ -10,19 +10,28 @@ Terminal based (No GUI)
 
 Compilation instructions
 Easy
-1. Clone repo
-2. Open output folder in terminal
+1. Clone repo > Use Master branch
+2. Open out/production/Redstor-Challenge folder in terminal
 3. Type --> java Main
 4. The code should run in terminal (assuming the right jdk is there)
-5. In case of error on linux try --> sudo apt install openjdk-17-jre-headless followed by --> sudo apt install openjdk-17-jdk-headless
+5. In case of error on linux try --> sudo apt install openjdk-17-jre-headless followed by --> sudo apt install openjdk-17-jdk-headless and repeat step 3
 
 Hard
 1. Clone the repo and open in IntelliJ Idea
-2. Click Build and see if any errors regarding JDK/JRE or source/release versions
-3. If all clear -> Check run and check terminal in IntelliJ IDE
+2. Click > Build (Ctrl+F9) and see if any errors regarding JDK/JRE or source/release versions
+3. If all clear -> Click run (Shif+F10) and check terminal in IntelliJ IDE
 4. If errors --> Click File > Project Structure > Project > SDK version is the same as --> Project Structure > Modules > Module SDK version
 
-This project has been tested to compile with
+To go a step further
+1. Click File > Project Structure > Project > Compiler output > Copy it
+2. In linux terminal or cmd > cd into that location 
+3. cd into src folder and copy all the files
+4. Create a new folder elsewhere on the computer and paste them there
+5. In terminal type > javac Main.java Audi.java BMW.java Chevrolet.java Dodge.java Product.java Checkout.java
+6. Once .class files appear type > java Main
+7. The code should run 
+
+This project has been tested to compile with SDK versions:
 1. 1.8 Eclipse Temurin version 1.8.0_302 on Windows
 2. jbr-17 Jetbrains Runtime version 17.0.6 on Linux Ubuntu
 
